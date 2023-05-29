@@ -4,7 +4,7 @@ import RenterABI from "./ABI/CarRentalPlatform.json";
 let selectedAccount;
 let renterContract;
 let isInitialized = false;
-let renterContractAddress = "0x7D2BDc3AB7187D749e1BDc6283dbD48401AeeCa8";
+let renterContractAddress = "0x9503Df0A6bB4e918C6bDBD1B5ADBbB8668e8bc2C";
 
 export const init = async () => {
     let provider = await window.ethereum;
@@ -94,7 +94,7 @@ export const editCarMetadata = async (id, name, imgUrl, rentFee, saleFee) => {
     }
 };
 
-export const editcarStatus = async (id, status) => {
+export const editCarStatus = async (id, status) => {
     if (!isInitialized) {
         await init();
     }
